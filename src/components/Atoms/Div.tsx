@@ -3,6 +3,24 @@ import styled,{css} from 'styled-components';
 const Div = styled.div<React.CSSProperties & {
     hoverBackgroundColor?: string,
     hoverBorder?: string,
+
+    mediaDisplay?: string,
+    mediaFlexDirection? :string,
+    mediaWidth? :string,
+    mediaMinWidth? :string,
+    mediaHeight?:string,
+    mediaMinHeight?: string,
+    mediaPosition?:string,
+    mediaTop?: string,
+    mediaBottom?: string,
+    mediaLeft?: string,
+    mediaRight?:string,
+    mediaBackgroundColor?: string,
+    mediaPadding?: string,
+    mediaMargin?: string,
+    mediaJustifyContent?: string,
+    mediaAlignItems?: string,
+    mediaGap?: string,
 }
 >`
     ${({display}) => display && `display : ${display}`};
@@ -40,8 +58,10 @@ const Div = styled.div<React.CSSProperties & {
     ${({ paddingLeft }) => paddingLeft && `padding-left : ${paddingLeft}`};
 
     ${({ height }) => height && `height : ${height}`};
+    ${({ maxHeight }) => maxHeight && `max-height : ${maxHeight}`};
     ${({ minHeight }) => minHeight && `min-height : ${minHeight}`};
     ${({ width }) => width && `width : ${width}`};
+    ${({ minWidth }) => minWidth && `min-width : ${minWidth}`};
     ${({ maxWidth }) => maxWidth && `max-width : ${maxWidth}`};
 
     background: ${({ background }) => background};
@@ -73,7 +93,32 @@ const Div = styled.div<React.CSSProperties & {
 
     :hover {
         background-color: ${({hoverBackgroundColor}) => hoverBackgroundColor};
-        border : ${({hoverBorder}) => hoverBorder}
+        border : ${({hoverBorder}) => hoverBorder};
+    }
+
+    @media screen and (max-width: 370px){
+        display: ${({mediaDisplay}) => mediaDisplay};
+        flex-direction: ${({mediaFlexDirection}) => mediaFlexDirection};
+
+        width: ${({mediaWidth}) => mediaWidth};
+        height: ${({mediaHeight}) => mediaHeight};
+
+        position: ${({mediaPosition}) => mediaPosition};
+        top: ${({mediaTop}) => mediaTop};
+        bottom: ${({mediaBottom}) => mediaBottom};
+        left: ${({mediaLeft}) => mediaLeft};
+        right: ${({mediaRight}) => mediaRight};
+
+        background-color: ${({mediaBackgroundColor}) => mediaBackgroundColor};
+        padding: ${({mediaPadding}) => mediaPadding};
+        margin: ${({mediaMargin}) => mediaMargin};
+
+        justify-content: ${({mediaJustifyContent}) => mediaJustifyContent};
+        align-items: ${({mediaAlignItems}) => mediaAlignItems};
+        gap: ${({mediaGap}) => mediaGap};
+
+        min-width: ${({mediaMinWidth}) => mediaMinWidth};
+        min-height: ${({mediaMinHeight}) => mediaMinHeight};
     }
 `
 

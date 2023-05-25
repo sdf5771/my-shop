@@ -5,7 +5,7 @@ import { subProductType } from 'types/subProductType';
 
 function SubProductElement({id, name, description, price, color, ImageComponent}: subProductType){
     return(
-        <Atoms.Div display='flex' width="100%" justifyContent='center' gap="100px" padding="60px">
+        <Atoms.Div display='flex' width="calc(100% - 120px)" justifyContent='center' gap="100px" padding="60px">
             <Atoms.Div marginTop="300px" display="flex" flexDirection='column'>
                 <Atoms.Span fontSize="16px" lineHeight="19px" fontWeight="300" color="#2B2835">{name}</Atoms.Span>
                 <Atoms.Span fontSize="50px" lineHeight="55px" fontWeight="700" color="#2B2835">{description}</Atoms.Span>

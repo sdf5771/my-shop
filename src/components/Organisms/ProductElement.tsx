@@ -10,6 +10,7 @@ function ProductElement({id, name, description, price, ImageComponent}: productT
             // justifyContent='space-between'
             position='relative'
             width="calc(393px - 40px)" 
+            flexBasis="353px"
             height="calc(560px - 40px)" 
             backgroundColor="#f8f8f9" 
             transition='all 0.4s ease' 
@@ -17,7 +18,7 @@ function ProductElement({id, name, description, price, ImageComponent}: productT
             <Atoms.Div width="100%" display='inline-flex' justifyContent='center' alignContent='center' position='absolute' top="20px">
                 <ImageComponent />
             </Atoms.Div>
-            <Atoms.Div zIndex="1" width="300px" display='flex' flexDirection='column' position='absolute' bottom="20px">
+            <Atoms.Div zIndex="1" width="calc(100% - 40px)" display='flex' flexDirection='column' position='absolute' bottom="20px">
                 <Atoms.Span fontSize="40px" fontWeight="500">{name}</Atoms.Span>
                 {description ? description.split('\n').map( (text, index) => {
                     return (<Atoms.Span key={index} fontWeight="400">{text}</Atoms.Span>)
