@@ -4,7 +4,7 @@ import { ProfileLogo, CartLogo, SearchLogo } from 'assets/logos';
 
 function MenuIconList(){
     return(
-        <Atoms.Div display="flex" gap="40px" alignItems='center'>
+        <Atoms.Div display="flex" gap="40px" alignItems='center' mediaWidth='100%' mediaFlexDirection='column' mediaGap="10px">
             <SearchLogo />
             <ProfileLogo />
             <CartLogo />

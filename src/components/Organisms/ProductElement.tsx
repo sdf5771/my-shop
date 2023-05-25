@@ -14,8 +14,10 @@ function ProductElement({id, name, description, price, ImageComponent}: productT
             height="calc(560px - 40px)" 
             backgroundColor="#f8f8f9" 
             transition='all 0.4s ease' 
-            padding="20px">
-            <Atoms.Div width="100%" display='inline-flex' justifyContent='center' alignContent='center' position='absolute' top="20px">
+            padding="20px"
+            mediaWidth="calc(341px - 40px)"
+            >
+            <Atoms.Div width="100%" mediaWidth="90%" display='inline-flex' justifyContent='center' alignContent='center' position='absolute' top="20px">
                 <ImageComponent />
             </Atoms.Div>
             <Atoms.Div zIndex="1" width="calc(100% - 40px)" display='flex' flexDirection='column' position='absolute' bottom="20px">

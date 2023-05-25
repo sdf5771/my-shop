@@ -5,8 +5,8 @@ import { mainProductType } from 'types/mainProductType';
 function MainProductElement({id, name, description, price, ImageComponent}:mainProductType){
     return(
         <Atoms.Div zIndex='5' display="flex" width="100%" justifyContent='center' alignContent='center' position="relative">
-            <Atoms.Div position="absolute" left="-242px">
-                <ImageComponent />
+            <Atoms.Div position="absolute" width="1078px" height="766px" mediaWidth='424px' mediaHeight='300px' left="-242px" mediaLeft="-63px">
+                <ImageComponent width="inherit" height="inherit" />
             </Atoms.Div>
             <Atoms.Div position="absolute" top="220px" right="150px" display="flex" flexDirection='column'>
                 <Atoms.Span fontSize="16px" lineHeight="19px" fontWeight="500" color="#ffffff" marginBottom="20px">{name}</Atoms.Span>

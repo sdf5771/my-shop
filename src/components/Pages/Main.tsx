@@ -14,7 +14,7 @@ function Main(){
         <Atoms.Div width="100vw">
             <Templates.Header />
             <Atoms.Div width="100%">
-                <Atoms.Div width="100%" height="616px" backgroundColor="#2B2835">
+                <Atoms.Div width="100%" height="616px" mediaHeight='208px' backgroundColor="#2B2835">
                     <Organisms.MainProductElement 
                         id={mainProduct.id} 
                         name={mainProduct.name} 
@@ -32,7 +32,18 @@ function Main(){
                             color={subProduct.color} 
                             ImageComponent={subProduct.ImageComponent}/>
                     </Atoms.Div>
-                    <Atoms.Div marginTop="30px" display='flex' flexWrap='wrap' justifyContent='center' gap="30px" padding="0 60px">
+                    <Atoms.Div 
+                        marginTop="30px" 
+                        display='flex' 
+                        flexWrap='wrap' 
+                        justifyContent='center' 
+                        gap="30px" 
+                        width="calc(100% - 120px)"
+                        padding="0 60px"
+
+                        mediaWidth='calc(100% - 35px)'
+                        mediaPadding='0 10px'
+                        >
                         {products ? products.map((product, index) => {
                             return <Organisms.ProductElement 
                                         key={product.id} 

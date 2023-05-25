@@ -17,8 +17,8 @@ function SubProductElement({id, name, description, price, color, ImageComponent}
                 <Atoms.Span 
                     fontSize="13px" lineHeight="19.62px" fontWeight="350" color="#000000">$60 Apple Music gift card with purchase of select Beats products.*</Atoms.Span>
             </Atoms.Div>
-            <Atoms.Div>
-                <ImageComponent />
+            <Atoms.Div width="755px" height="755px" mediaWidth='348px' mediaHeight='348px'>
+                <ImageComponent width="inherit" height="inherit" />
             </Atoms.Div>
         </Atoms.Div>
     )
