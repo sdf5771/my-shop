@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.js": "/my-shop/static/js/main.4038213e.js",
+    "static/js/787.6521655c.chunk.js": "/my-shop/static/js/787.6521655c.chunk.js",
+    "static/media/sub_product.svg": "/my-shop/static/media/sub_product.682e7f6345d4424866a035931695515b.svg",
+    "static/media/headphone_black.svg": "/my-shop/static/media/headphone_black.ce506b4247f6a9929b08b042d0a96e27.svg",
+    "static/media/main_product.svg": "/my-shop/static/media/main_product.ea473c52f11f5fbe29272a11d15895a9.svg",
+    "static/media/headphone_yellow.svg": "/my-shop/static/media/headphone_yellow.879c821b0b5ca3a79b6f9cfa3540b306.svg",
+    "static/media/bluetouth_earphone_brown.svg": "/my-shop/static/media/bluetouth_earphone_brown.6dc8fafcd05561fb4f772e45aca64181.svg",
+    "static/media/earphone_gold.svg": "/my-shop/static/media/earphone_gold.156649d409b3fe52a4985220c3c0bc33.svg",
+    "static/media/bluetouth_earphone_black.svg": "/my-shop/static/media/bluetouth_earphone_black.64aaa0d4dc6a3cd821a33b1d726562f9.svg",
+    "static/media/earphone_black.svg": "/my-shop/static/media/earphone_black.5989460a60647251cfdac2e0320daf35.svg",
+    "static/media/sns_icon.svg": "/my-shop/static/media/sns_icon.d5bc223e8fb641ab654e5da3bd1b90df.svg",
+    "static/media/logo.svg": "/my-shop/static/media/logo.b58029ba2ad8345f929d7ffcd5c91e06.svg",
+    "static/media/cart.svg": "/my-shop/static/media/cart.df418c7733e86f29166c3aa44d09e3aa.svg",
+    "static/media/search.svg": "/my-shop/static/media/search.c2494ac0b0571221f74c773979c26be1.svg",
+    "static/media/profile.svg": "/my-shop/static/media/profile.8a25da05d0cf19d600f1029824297203.svg",
+    "static/media/hamburgerIcon.svg": "/my-shop/static/media/hamburgerIcon.bdc7d80e877e91d09138bc15e069bf76.svg",
+    "index.html": "/my-shop/index.html",
+    "main.4038213e.js.map": "/my-shop/static/js/main.4038213e.js.map",
+    "787.6521655c.chunk.js.map": "/my-shop/static/js/787.6521655c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.4038213e.js"
+  ]
+}
