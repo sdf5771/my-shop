@@ -1,46 +1,172 @@
-# Getting Started with Create React App
+`@lastest-update readme post: 2023-05-26`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Untitled](readme.gif)
 
-## Available Scripts
+This project is Initialized create-react-app
 
-In the project directory, you can run:
+Make Responsive Web Site
 
-### `npm start`
+Site Link : https://sdf5771.github.io/my-shop/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Design Pattern : `Atomic Design Pattern`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Use Tech Stacks Version
 
-### `npm test`
+- react : `18.2.0`
+- gh-pages : `5.0.0`
+- typescript : `4.9.5`
+- react-responsive : `9.0.2`
+- react-router-dom : `6.11.2`
+- recoil : `0.7.7`
+- styled-components : `5.3.10`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 1. How to use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Install Dependency Modules
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```tsx
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Start
 
-### `npm run eject`
+```tsx
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. Package.json
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```tsx
+{
+  "name": "my-shop",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.32",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@types/react-responsive": "^8.0.5",
+    "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-responsive": "^9.0.2",
+    "react-router-dom": "^6.11.2",
+    "react-scripts": "5.0.1",
+    "recoil": "^0.7.7",
+    "styled-components": "^5.3.10",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
+  },
+  "homepage": "https://sdf5771.github.io/my-shop/"
+}
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## 3. Directories (Source Tree)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```tsx
+.
+├── Router.tsx
+├── 📁 assets
+│   ├── 📁 images
+│   │   ├── bluetouth_earphone_black.svg
+│   │   ├── bluetouth_earphone_brown.svg
+│   │   ├── earphone_black.svg
+│   │   ├── earphone_gold.svg
+│   │   ├── headphone_black.svg
+│   │   ├── headphone_yellow.svg
+│   │   ├── index.ts
+│   │   ├── main_product.svg
+│   │   └── sub_product.svg
+│   └── 📁 logos
+│       ├── cart.svg
+│       ├── hamburgerIcon.svg
+│       ├── index.ts
+│       ├── logo.svg
+│       ├── profile.svg
+│       ├── search.svg
+│       └── sns_icon.svg
+├── 📁 components
+│   ├── 📁 Atoms
+│   │   ├── Button.tsx
+│   │   ├── Div.tsx
+│   │   ├── Input.tsx
+│   │   ├── Span.tsx
+│   │   └── index.ts
+│   ├── 📁 Molecules
+│   │   ├── FindColor.tsx
+│   │   ├── MenuIconList.tsx
+│   │   ├── MenuList.tsx
+│   │   └── index.ts
+│   ├── 📁 Organisms
+│   │   ├── HamburgerMenu.tsx
+│   │   ├── MainProductElement.tsx
+│   │   ├── ProductElement.tsx
+│   │   ├── SignUpForm.tsx
+│   │   ├── SubProductElement.tsx
+│   │   └── index.ts
+│   ├── 📁 Pages
+│   │   ├── Main.tsx
+│   │   └── index.ts
+│   └── 📁 Templates
+│       ├── Footer.tsx
+│       ├── Header.tsx
+│       └── index.ts
+├── index.tsx
+├── 📁 mediaQuery
+│   └── index.ts
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+├── setupTests.ts
+├── 📁 state
+│   ├── hamBurgerMenuState.ts
+│   ├── index.ts
+│   ├── mainProduct.ts
+│   ├── products.ts
+│   └── subProduct.ts
+└── 📁 types
+    ├── index.ts
+    ├── mainProductType.ts
+    ├── productType.ts
+    └── subProductType.ts
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+13 directories, 51 files
+```
