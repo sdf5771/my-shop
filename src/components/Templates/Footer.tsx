@@ -1,12 +1,23 @@
 import React from 'react';
 import Atoms from 'components/Atoms';
 import { Logo, SNSIcons } from 'assets/logos';
+import { useMediaQuery } from 'react-responsive';
 
 function Footer(){
+    const isNotDesktop: boolean = useMediaQuery({
+        query: "(min-width:1024px)",
+    });
+
     return(
-        <Atoms.Div display="flex" flexDirection='column' justifyContent='center' backgroundColor="#2B2835" width="calc(100% - 160px)" height="calc(344px - 60px)" padding="30px 80px" >
-            <Atoms.Div display="flex" justifyContent='space-between' alignContent='center'>
-                <Atoms.Div>
+        <Atoms.Div display="flex" flexDirection='column' justifyContent='center' backgroundColor="#2B2835" width="calc(100% - 160px)" height={isNotDesktop ? "calc(344px - 60px)" : ""} padding="30px 80px" >
+            <Atoms.Div 
+                display="flex" 
+                flexDirection={isNotDesktop ? "row" : "column"} 
+                justifyContent={isNotDesktop ? 'space-between' : ""} 
+                alignContent='center'
+                gap={isNotDesktop ? "" : "20px"}
+                >
+                <Atoms.Div display={isNotDesktop ? "" : "flex"} justifyContent={isNotDesktop ? '' : "center"}>
                     <Logo />
                 </Atoms.Div>
 
@@ -57,9 +68,14 @@ function Footer(){
                 </Atoms.Div>
             </Atoms.Div>
 
-            <Atoms.Div display='flex' marginTop="40px" justifyContent='center' width="100%">
-                <Atoms.Span fontSize="12px" color="#ffffff" fontWeight="300" lineHeight="15px">Copyright @ 2020 Apple Inc. - All rights reserved.</Atoms.Span>
-            </Atoms.Div>
+            {isNotDesktop ? 
+            <>
+                <Atoms.Div display='flex' marginTop="40px" justifyContent='center' width="100%">
+                    <Atoms.Span fontSize="12px" color="#ffffff" fontWeight="300" lineHeight="15px">Copyright @ 2020 Apple Inc. - All rights reserved.</Atoms.Span>
+                </Atoms.Div>
+            </> 
+            : null}
+            
         </Atoms.Div>
     )
 }

@@ -1,10 +1,19 @@
 import React from 'react';
 import Atoms from 'components/Atoms';
 import Molecules from 'components/Molecules';
+import Organisms from 'components/Organisms';
 import { Logo } from 'assets/logos';
 import { HamburgerIcon } from 'assets/logos';
+import { useMediaQuery } from 'react-responsive';
+import { useRecoilState } from 'recoil';
+import hamBurgerMenuState from 'state/hamBurgerMenuState';
 
 function Header(){
+    const isNotDesktop: boolean = useMediaQuery({
+        query: "(min-width:1024px)",
+    });
+    const [hamBurgerState, setHamBurgerState] = useRecoilState(hamBurgerMenuState);
+
     return(
         <Atoms.Div 
             zIndex="10" 
@@ -31,11 +40,38 @@ function Header(){
                 mediaWidth='27px' mediaHeight='27px'
                 mediaMinWidth='27px' mediaMinHeight='27px'
                 >
-                <Logo width="inherit" height="inherit"/>
+                <Logo width="100%" height="100%"/>
             </Atoms.Div>
-            <Molecules.MenuList />
-            <Molecules.MenuIconList />
-            <Atoms.Div display="none" mediaDisplay='block' mediaPosition='absolute' mediaTop='10px' mediaRight='30px'>
+            { isNotDesktop ? 
+                <>
+                    <Molecules.MenuList />
+                    <Molecules.MenuIconList />
+                </>
+             : 
+                hamBurgerState.isOpen ? <Organisms.HamburgerMenu /> : null
+             }
+            
+            <Atoms.Div 
+                display="none" 
+                mediaDisplay='block' 
+                mediaPosition='absolute' 
+                mediaTop='10px' 
+                mediaRight='30px'
+                cursor='pointer'
+                onClick={(event: React.MouseEvent<HTMLDivElement>) => {
+                    if(hamBurgerState.isOpen){
+                        setHamBurgerState({
+                            isOpen: false,
+                            menuLeftPosition: "-350px",
+                        })
+                    } else {
+                        setHamBurgerState({
+                            isOpen: true,
+                            menuLeftPosition: "0px",
+                        })
+                    }
+                }}
+                >
                 <HamburgerIcon />
             </Atoms.Div>
         </Atoms.Div>

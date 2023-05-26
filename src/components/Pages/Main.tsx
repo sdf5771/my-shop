@@ -55,7 +55,7 @@ function Main(){
                                         />
                         }) : null}
                     </Atoms.Div>
-                    <Atoms.Div marginTop="30px">
+                    <Atoms.Div display='flex' justifyContent='center' alignContent='center' width="calc(100% - 120px)" mediaWidth="calc(100% - 20px)" mediaPadding='30px 10px 40px 10px' marginTop="30px" padding="30px 60px 40px 60px">
                         <Organisms.SignUpForm />
                     </Atoms.Div>
                 </Atoms.Div>

@@ -96,7 +96,7 @@ const Div = styled.div<React.CSSProperties & {
         border : ${({hoverBorder}) => hoverBorder};
     }
 
-    @media screen and (max-width: 370px){
+    @media screen and (max-width: 1024px){
         display: ${({mediaDisplay}) => mediaDisplay};
         flex-direction: ${({mediaFlexDirection}) => mediaFlexDirection};
 
