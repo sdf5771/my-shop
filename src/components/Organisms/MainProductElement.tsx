@@ -22,7 +22,7 @@ function MainProductElement({id, name, description, price, ImageComponent}:mainP
                     mediaWidth='424px' 
                     mediaHeight='300px' 
                     left="-265px" 
-                    mediaLeft="45%" 
+                    mediaLeft="42%" 
                     transform={isNotDesktop ? "" : "translateX(-50%)"}>
                     <ImageComponent width="100%" height="100%" />
                 </Atoms.Div>

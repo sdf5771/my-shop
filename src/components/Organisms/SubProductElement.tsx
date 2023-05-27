@@ -20,7 +20,7 @@ function SubProductElement({id, name, description, price, color, ImageComponent}
             justifyContent={isWideScreen ? 'center' : "space-between"} 
             gap="100px" 
             padding="60px"
-
+            position='relative'
             mediaPadding='20px'
             mediaWidth='calc(100% - 40px)' 
             mediaHeight="900px" 
