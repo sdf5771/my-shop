@@ -21,7 +21,7 @@ function MainProductElement({id, name, description, price, ImageComponent}:mainP
                     height="766px" 
                     mediaWidth='424px' 
                     mediaHeight='300px' 
-                    left="-303px" 
+                    left="-265px" 
                     mediaLeft="45%" 
                     transform={isNotDesktop ? "" : "translateX(-50%)"}>
                     <ImageComponent width="100%" height="100%" />
