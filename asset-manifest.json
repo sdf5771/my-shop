@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/my-shop/static/js/main.08283d77.js",
+    "main.js": "/my-shop/static/js/main.6636b9dc.js",
     "static/js/787.6521655c.chunk.js": "/my-shop/static/js/787.6521655c.chunk.js",
     "static/media/sub_product.svg": "/my-shop/static/media/sub_product.682e7f6345d4424866a035931695515b.svg",
     "static/media/headphone_black.svg": "/my-shop/static/media/headphone_black.ce506b4247f6a9929b08b042d0a96e27.svg",
@@ -17,10 +17,10 @@
     "static/media/profile.svg": "/my-shop/static/media/profile.8a25da05d0cf19d600f1029824297203.svg",
     "static/media/hamburgerIcon.svg": "/my-shop/static/media/hamburgerIcon.bdc7d80e877e91d09138bc15e069bf76.svg",
     "index.html": "/my-shop/index.html",
-    "main.08283d77.js.map": "/my-shop/static/js/main.08283d77.js.map",
+    "main.6636b9dc.js.map": "/my-shop/static/js/main.6636b9dc.js.map",
     "787.6521655c.chunk.js.map": "/my-shop/static/js/787.6521655c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.08283d77.js"
+    "static/js/main.6636b9dc.js"
   ]
 }
