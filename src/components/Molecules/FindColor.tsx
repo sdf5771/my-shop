@@ -7,7 +7,7 @@ type TFindColor = {
 
 function FindColor({colorList}:TFindColor){
     return(
-        <Atoms.Div display='flex' flexDirection='column' width="264px">
+        <Atoms.Div display='flex' flexDirection='column' width="270px">
             <Atoms.Span fontSize="40px" lineHeight="55px" fontWeight="350" color="#2B2835">Available Colors</Atoms.Span>
             <Atoms.Div position='relative'>
                 <Atoms.Span fontSize="16px" lineHeight="19px" color="#2B2835" marginBottom="10px">Find your Color</Atoms.Span>
