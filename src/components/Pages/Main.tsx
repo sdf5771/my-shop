@@ -3,12 +3,16 @@ import { useRecoilState } from 'recoil';
 import state from 'state';
 import Atoms from 'components/Atoms';
 import Organisms from 'components/Organisms';
-import Templates from 'components/Templates'
+import Templates from 'components/Templates';
+import { useMediaQuery } from 'react-responsive';
 
 function Main(){
     const [mainProduct, setMainProduct] = useRecoilState(state.mainProduct);
     const [subProduct, setSubProduct] = useRecoilState(state.subProduct);
     const [products, setProducts] = useRecoilState(state.products);
+    const isWideScreen: boolean = useMediaQuery({
+        query: "(min-width:1440px)",
+    });
 
     return(
         <Atoms.Div width="100vw">
@@ -34,15 +38,14 @@ function Main(){
                     </Atoms.Div>
                     <Atoms.Div 
                         marginTop="30px" 
-                        display='flex' 
+                        display={isWideScreen ? "grid" : 'flex'} 
+                        gridTemplateColumns='repeat(3, minmax(auto, 1fr))'
                         flexWrap='wrap' 
-                        justifyContent='center' 
+                        justifyContent="space-between"
                         gap="30px" 
                         width="calc(100% - 120px)"
                         padding="0 60px"
-
-                        mediaWidth='calc(100% - 35px)'
-                        mediaPadding='0 10px'
+                        
                         >
                         {products ? products.map((product, index) => {
                             return <Organisms.ProductElement 
@@ -55,7 +58,7 @@ function Main(){
                                         />
                         }) : null}
                     </Atoms.Div>
-                    <Atoms.Div display='flex' justifyContent='center' alignContent='center' width="calc(100% - 120px)" mediaWidth="calc(100% - 20px)" mediaPadding='30px 10px 40px 10px' marginTop="30px" padding="30px 60px 40px 60px">
+                    <Atoms.Div display='flex' justifyContent='center' alignContent='center' width="calc(100% - 120px)" marginTop="30px" padding="30px 60px 40px 60px">
                         <Organisms.SignUpForm />
                     </Atoms.Div>
                 </Atoms.Div>

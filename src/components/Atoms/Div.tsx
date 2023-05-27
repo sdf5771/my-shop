@@ -21,6 +21,8 @@ const Div = styled.div<React.CSSProperties & {
     mediaJustifyContent?: string,
     mediaAlignItems?: string,
     mediaGap?: string,
+
+    gridTemplateColumns?: string,
 }
 >`
     ${({display}) => display && `display : ${display}`};
@@ -91,12 +93,14 @@ const Div = styled.div<React.CSSProperties & {
 
     opacity: ${({opacity}) => opacity};
 
+    ${({gridTemplateColumns}) => gridTemplateColumns && `grid-template-columns: ${gridTemplateColumns}`};
+
     :hover {
         background-color: ${({hoverBackgroundColor}) => hoverBackgroundColor};
         border : ${({hoverBorder}) => hoverBorder};
     }
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1023px){
         display: ${({mediaDisplay}) => mediaDisplay};
         flex-direction: ${({mediaFlexDirection}) => mediaFlexDirection};
 
